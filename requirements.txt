@@ -1,5 +1,6 @@
 fastapi>=0.95.2
 uvicorn>=0.18.0
+gunicorn>=22.0.0
 google-generativeai
 python-dotenv
 langchain
@@ -8,4 +9,4 @@ chromadb
 pdf2image
 faiss-cpu
 langchain_google_genai
-gunicorn
+
