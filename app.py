@@ -177,8 +177,6 @@
 #         logger.error(f"Error processing request: {str(e)}")
 #         return {"message": "Error processing request.", "error": str(e)}
 
-
-
 from fastapi import FastAPI, Form, File, UploadFile, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -188,13 +186,15 @@ import os
 from dotenv import load_dotenv
 import google.generativeai as genai
 
+# Load environment variables
 load_dotenv()
-
-app = FastAPI()
-templates = Jinja2Templates(directory="templates")
 
 # Configure Generative AI with API key
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+# Initialize FastAPI app
+app = FastAPI()
+templates = Jinja2Templates(directory="templates")
 
 # Function to process input image for AI model
 def input_image_setup(file: UploadFile):
@@ -258,6 +258,3 @@ async def calculate(name: str = Form(...), input: str = Form(...), age: int = Fo
         return {"message": "Success", "response": response, "bmi": bmi, "ideal_bmi": ideal_bmi}
     except Exception as e:
         return {"message": "Error processing request.", "error": str(e)}
-
-# Explicitly define the ASGI application
-asgi_app = app
