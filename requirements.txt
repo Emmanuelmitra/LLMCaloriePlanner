@@ -1,0 +1,10 @@
+fastapi>=0.95.2
+uvicorn>=0.18.0
+google-generativeai
+python-dotenv
+langchain
+PyPDF2
+chromadb
+pdf2image
+faiss-cpu
+langchain_google_genai
