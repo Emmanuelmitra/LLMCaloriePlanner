@@ -11,4 +11,5 @@ pillow==9.5.0
 starlette==0.27.0
 uritemplate==4.1.1
 python-multipart
-gunicorn==22.0.0 
+gunicorn==22.0.0
+jinja2==3.1.2
