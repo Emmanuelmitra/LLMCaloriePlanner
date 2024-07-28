@@ -289,9 +289,6 @@
 
 
 
-
-
-
 from fastapi import FastAPI, Form, File, UploadFile, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
